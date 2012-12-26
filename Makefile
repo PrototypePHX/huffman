@@ -1,7 +1,6 @@
 #########################
-# customise these
 CXXFILES := main.cpp code.cpp tree.cpp node.cpp
-PROG := prog
+PROG := huffman
 CXXFLAGS := "-std=c++0x" -Wall -pedantic -g
 LDFLAGS :=
 ########################
