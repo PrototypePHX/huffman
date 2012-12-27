@@ -28,7 +28,7 @@ class decompress
       decompress(std::string file_);
       ~decompress();
 
-      std::string plaintext() const { return ptext; }
+      std::string plaintext() const;
 
 
    private:

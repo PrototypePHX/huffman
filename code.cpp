@@ -114,8 +114,6 @@ void search(node *r, const char c, bool &found, std::string &plaincode)
 
 
 
-
-
 decompress::decompress(std::string file_): file(file_, std::ios::binary)
 {
    if (!(file.is_open()))
@@ -140,6 +138,13 @@ decompress::~decompress()
 {
    file.close();
 }
+
+
+std::string decompress::plaintext() const
+{
+   return ptext;
+}
+
 
 void decompress::getplain(const tree &hc)
 {
