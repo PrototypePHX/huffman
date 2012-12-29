@@ -30,7 +30,7 @@ void compress::write(std::string outfile_)
    std::string plaintext;
    for (std::string line; std::getline(infile, line); ) {
       line += '\n';
-      for (int i = 0; i<=line.size(); histog[line[i++]]++);
+      for (unsigned i = 0; i<=line.size(); histog[line[i++]]++);
       plaintext += line;
    }
 
