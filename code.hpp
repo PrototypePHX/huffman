@@ -20,6 +20,10 @@ class compress
    private:
       std::ifstream infile;
       std::map<char, int> histog;
+
+      // prevent calling of copy-ctor and assignment operator
+      compress(const compress &c);
+      compress& operator=(const compress &rhs);
 };
 
 class decompress
@@ -38,6 +42,10 @@ class decompress
       std::map<char, int> histog;
 
       void getplain(const tree &hc);
+
+      // prevent calling of copy-ctor and assignment operator
+      decompress(const decompress &c);
+      decompress& operator=(const decompress &rhs);
 };
 
 

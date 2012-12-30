@@ -20,6 +20,10 @@ struct node
       virtual nodetype type() const = 0;
       node(node *left_, node *right_, int weight_ = 0);
       virtual ~node() = 0;
+
+   private:
+      node(const node *n);
+      node* operator=(const node *rhs);
 };
 
 struct branch: public node

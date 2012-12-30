@@ -17,6 +17,9 @@ class tree
       node *root;
       std::priority_queue<node*, std::vector<node*>, node_comp> leaves;
       void create_tree();
+
+      tree(const tree &t);
+      tree& operator=(const tree &rhs);
 };
 
 #endif // TREE_HPP
